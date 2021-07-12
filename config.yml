@@ -1,0 +1,25 @@
+# Configuration file for ideel
+
+# Location of input genome directory
+genomedir: genomes
+
+# Acceptable input FASTA file suffix
+fasta_suffix: fna
+
+# Path to prodigal output
+prodigaldir: proteins
+
+# Path to Diamond database
+# By default, we build a local representation of SWISSPROT
+dbpath: databases/uniprot_sprot.dmnd
+
+# Location of SWISSPROT FASTA - local download and URL
+sprot_local: databases/uniprot_sprot.fasta.gz
+sprot_url: https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz
+
+# Parameters for diamond
+diamond_params: "6 qlen slen"
+diamond_dir: diamond_output
+
+# Path to directory for output PNG images
+pngdir: figures

@@ -1,0 +1,11 @@
+# Local Snakemake cache
+.snakemake
+
+# Default output directories
+databases/
+diamond_output/
+figures/
+proteins/
+
+# Default input directory
+genomes/
