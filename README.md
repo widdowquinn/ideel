@@ -6,7 +6,13 @@
 - Original blog post: ["Stop Publishing Bad Genomes", Mick Watson (2018)](http://www.opiniomics.org/on-stuck-records-and-indel-errors-or-stop-publishing-bad-genomes/)
 - Original repository: [mw55309/ideel](https://github.com/mw55309/ideel)
 
-`ideel` is a `snakemake` workflow that processes a set of genomes (the *input*) and predicts coding sequences (CDS) with the `prodigal` gene-calling software. The conceptual translations for these sequences are compared to (by default) the complete `SWISSPROT` database using the `diamond` sequence search tool. If you do not have a copy of this, it will be downloaded and prepared for you. The length of each query protein is compared to its best `SWISSPROT` hit, and a `query length`/`hit length` ratio calculated. Two histograms are produced, showing the distribution of this ratio for all predicted conceptual translations.
+`ideel` is a `snakemake` workflow that processes a set of genomes (the *input*) and predicts coding sequences (CDS) with the `prodigal` gene-calling software. 
+
+The conceptual translations for these sequences are compared to (by default) the complete `SWISSPROT` database using the `diamond` sequence search tool. If you do not have a copy of this, it will be downloaded and prepared for you. 
+
+The length of each query protein is compared to its best `SWISSPROT` hit, and a `query length`/`hit length` ratio calculated. 
+
+Two histograms are produced, showing the distribution of this ratio for all predicted conceptual translations.
 
 The tool is useful to help diagnose genome assemblies where there are a significant proportion of truncated coding sequences, having a premature stop codon. This can be a feature of long-read-only assemblies. Candidates are shown in the histogram as the proteins with `query length`/`hit length` ratio <≈ 0.9.
 
